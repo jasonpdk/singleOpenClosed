@@ -1,0 +1,9 @@
+Git Repo: https://github.com/jasonpdk/singleOpenClosed
+
+Q2
+a) The UserController class violates the Single Responsibility Principal because the class is responsible for more than one function, creation of the user and validation of the user. For this class to comply with the SRP the validation needs to be split into a separate class.
+
+c) With the code refactored it is more modular and the classes are easier to read.
+
+Q3
+b) Similar to above the code is more modular. The Subscriber class could be reused for ay additional services.
