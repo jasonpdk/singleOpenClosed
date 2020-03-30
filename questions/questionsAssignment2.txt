@@ -1,0 +1,6 @@
+Q2
+a) The MessagePrinter class is violating the Dependency Inversion Principle because it uses one specific type of formatter, JSONFormatter. If you needed to print XML or Plain Text for example the MessagePrinter class could not be used as is. It would be better to accept any class that implements the Formatter interface so that a different kind of formatter could be used, for example the TextFormatter.
+
+b) I did this by having the writeMessage method in MessagePrinter take a third argument. This argument is the type of Formatter to be used. In this way the method can be reused to work with any kind of Formatter.
+
+c) The code is much more modular. The MessagePrinter class will work with any kind of Formatter and is no longer tied to a specific one. This code is more maintainable as a result of this. If in the future the message needed to be printed in another formati, like XML it could easily be added without making any changes to the existing classes. So there is less chance of introducing a bug in a change like this.
